@@ -1,0 +1,113 @@
+{
+  "id": "2d7b4b7e-b62e-4acc-a38e-5f5eb36c8877",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.session": {
+      "name": "session",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "prompt": {
+          "name": "prompt",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "openAIResponse": {
+          "name": "openAIResponse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "openAIResponseTime": {
+          "name": "openAIResponseTime",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "deepseekResponse": {
+          "name": "deepseekResponse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "deepseekResponseTime": {
+          "name": "deepseekResponseTime",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "geminiResponse": {
+          "name": "geminiResponse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "geminiResponseTime": {
+          "name": "geminiResponseTime",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.todo": {
+      "name": "todo",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "text": {
+          "name": "text",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "done": {
+          "name": "done",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
